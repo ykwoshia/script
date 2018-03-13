@@ -11,6 +11,7 @@ dnf install google-chrome-stable --nogpgcheck
 dnf install tmux
 dnf install zsh
 dnf install fzf
+dnf install gnome-tweak-tool
 
 pip install shadowsocks
 
