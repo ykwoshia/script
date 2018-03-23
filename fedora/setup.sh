@@ -11,6 +11,7 @@ ln -s ~/Documents/myvim/gitconfig .gitconfig
 
 
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+rm -rf ~/.oh-my-zsh/custom
 ln -s ~/Documents/script/zshrc .zshrc
 ln -s ~/Documents/script/custom ~/.oh-my-zsh/custom
 
