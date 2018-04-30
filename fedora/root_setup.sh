@@ -1,4 +1,8 @@
-cat << EOF > /etc/yum.repos.d/google-chrome.repo
+## create files if not exists
+echo "modify sslocal before run"
+exit 0
+if [[ ! -f /etc/yum.repos.d/google-chrome.repo ]]; then
+	cat << EOF > /etc/yum.repos.d/google-chrome.repo
 [google-chrome]
 name=google-chrome - \$basearch
 baseurl=http://dl.google.com/linux/chrome/rpm/stable/\$basearch
@@ -6,12 +10,20 @@ enabled=1
 gpgcheck=1
 gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
 EOF
+fi
 
-dnf install google-chrome-stable --nogpgcheck
-dnf install tmux
-dnf install zsh
-dnf install fzf
-dnf install gnome-tweak-tool
+if [[ $HOSTNAME="myfedora.localdomain" ]]; then
+	dnf -y update
+fi
+
+
+dnf -y install git
+dnf -y install vim
+dnf -y install tmux
+dnf -y install zsh
+dnf -y install fzf
+dnf -y install google-chrome-stable --nogpgcheck
+# dnf install gnome-tweak-tool
 
 pip install shadowsocks
 
