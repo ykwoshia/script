@@ -21,7 +21,8 @@ dnf -y install git
 dnf -y install vim
 dnf -y install tmux
 dnf -y install zsh
-dnf -y install fzf
+#dnf -y install fzf
+# fzf install in user dir
 dnf -y install google-chrome-stable --nogpgcheck
 # dnf install gnome-tweak-tool
 
