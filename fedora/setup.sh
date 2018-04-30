@@ -24,6 +24,8 @@ cd powerline-fonts
 ./install.sh
 cd ~/Documents
 
+mkdir -p ~/.config/xfce4/terminal/colorschemes
+cp ~/Documents/script/fedora/xfce/tomorrow.theme ~/.config/xfce4/terminal/colorschemes
 
 #chsh -s /bin/zsh
 google-chrome --proxy-server=socks5://127.0.0.1:1080
