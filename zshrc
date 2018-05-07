@@ -61,7 +61,7 @@ ZSH_CUSTOM=$HOME/Documents/script/oh-my-zsh/custom
 plugins=(
   git
   tmux
-  vi-mode
+  # vi-mode
   perl
   extract
   z
@@ -71,6 +71,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+source $HOME/perl5/perlbrew/etc/bashrc
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
