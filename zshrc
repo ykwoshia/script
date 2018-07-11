@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/local/bin:$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.pyenv/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -75,7 +76,8 @@ chpwd() {
 
 # User configuration
 source $HOME/perl5/perlbrew/etc/bashrc
-
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -104,5 +106,12 @@ source $HOME/perl5/perlbrew/etc/bashrc
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cl="clear"
 alias vi="vim"
+alias def="sdcv"
+alias python="python3"
+
+# Example aliases
+function chpwd() {
+    ls
+}
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
