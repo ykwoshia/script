@@ -18,6 +18,7 @@ fi
 
 
 dnf -y install git
+dnf -y update vim-minimal
 dnf -y install vim
 dnf -y install tmux
 dnf -y install zsh

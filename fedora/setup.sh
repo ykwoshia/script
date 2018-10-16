@@ -21,7 +21,8 @@ ln -s ~/Documents/myvim/tmuxconf .tmux.conf
 
 ### git
 ln -s ~/Documents/myvim/gitconfig .gitconfig
-ln -s ~/Documents/myvim/gitignore .gitignore
+mkdir -p ~/.config/git
+ln -s ~/Documents/myvim/gitignore ~/.config/git/ignore
 
 ### zsh
 git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git
