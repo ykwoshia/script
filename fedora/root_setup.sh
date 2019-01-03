@@ -18,14 +18,54 @@ fi
 
 
 dnf -y install git
-dnf -y update vim-minimal
-dnf -y install vim
+
+# use nvim and vim-X11
+dnf -y install vim-X11
+dnf -y install neovim python2-neovim python3-neovim
+
 dnf -y install tmux
 dnf -y install zsh
+dnf -y install adobe-source-code-pro-fonts
+dnf -y install ctags
 #dnf -y install fzf
 # fzf install in user dir
 dnf -y install google-chrome-stable --nogpgcheck
-# dnf install gnome-tweak-tool
+
+# ========= here
+# virtualbox
+dnf -y install gcc
+dnf -y install perl
+dnf -y install kernel-devel-4.13.9-300.fc27.x86_64
+dnf -y install kernel-headers-4.13.9-300.fc27.x86_64
+
+# python compile
+dnf -y install zlib-devel
+dnf -y install bzip2
+dnf -y install bzip2-devel
+dnf -y install readline-devel
+dnf -y install sqlite
+dnf -y install sqlite-devel
+dnf -y install openssl-devel
+dnf -y install xz xz-devel
+dnf -y install libffi-devel
+
+dnf -y install tcl
+dnf -y install tcl-devel
+dnf -y install tk
+dnf -y install tk-devel
+
+dnf -y install python2-wxpython
+
+# office
+dnf -y install libreoffice
+
+
+# services
+dnf -y install httpd
+dnf -y install cobbler
+dnf -y install xinetd
+dnf -y install dhcpd
+dnf -y install rsync
 
 pip install shadowsocks
 

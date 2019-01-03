@@ -75,7 +75,7 @@ chpwd() {
 }
 
 # User configuration
-source $HOME/perl5/perlbrew/etc/bashrc
+#source $HOME/perl5/perlbrew/etc/bashrc
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -105,9 +105,12 @@ eval "$(pyenv virtualenv-init -)"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cl="clear"
-alias vi="vim"
+# alias vi="vimx"
+alias vi="nvim"
 alias def="sdcv"
-alias python="python3"
+# alias grep="grep -P --colors=auto"
+alias pie="perl -pi -e"
+# alias python="python3"
 
 # Example aliases
 function chpwd() {

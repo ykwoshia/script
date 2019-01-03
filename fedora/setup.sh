@@ -24,6 +24,12 @@ ln -s ~/Documents/myvim/gitconfig .gitconfig
 mkdir -p ~/.config/git
 ln -s ~/Documents/myvim/gitignore ~/.config/git/ignore
 
+### ctags
+ln -s ~/Documents/myvim/ctags ~/.ctags
+
+### ctags
+ln -s ~/Documents/myvim/flake8 ~/.flake8
+
 ### zsh
 git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git
 cp -r oh-my-zsh ~/.oh-my-zsh
