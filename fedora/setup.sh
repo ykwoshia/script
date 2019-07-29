@@ -60,6 +60,8 @@ curl -L https://install.perlbrew.pl | bash
 
 ### pyenv
 curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+## pyinstaller require CPython build with --enable-shared
+# env PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install xxx
 
 #chsh -s /bin/zsh
 # google-chrome --proxy-server=socks5://127.0.0.1:1080
