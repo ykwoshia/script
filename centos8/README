@@ -46,6 +46,7 @@ dkms
 
 [boost]
 dnf install boost-devel
+
 [commands]
 # show ip address of this machine
 ip a show

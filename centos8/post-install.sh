@@ -12,17 +12,17 @@ fi
 
 
 ### vim
-if [[ ! -d ~/Documents/myvim ]]; then
+if [[ ! -d ~/.vim ]]; then
 echo setup myvim
-ln -s ~/Documents/myvim/vimrc .vimrc
+ln -s ~/Documents/myvim/vimrc ~/.vimrc
 mkdir -p ~/.vim/colors
 cp ~/Documents/myvim/Tomorrow-Night-Eighties.vim ~/.vim/colors
 
 ### tmux
-ln -s ~/Documents/myvim/tmuxconf .tmux.conf
+ln -s ~/Documents/myvim/tmuxconf ~/.tmux.conf
 
 ### git
-ln -s ~/Documents/myvim/gitconfig .gitconfig
+ln -s ~/Documents/myvim/gitconfig ~/.gitconfig
 mkdir -p ~/.config/git
 ln -s ~/Documents/myvim/gitignore ~/.config/git/ignore
 
@@ -38,7 +38,8 @@ if [[ ! -d ~/.oh-my-zsh ]]; then
 echo setup zsh
 git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 rm -rf ~/.oh-my-zsh/custom
-ln -s ~/Documents/script/zshrc .zshrc
+rm -rf ~/.zshrc
+ln -s ~/Documents/script/zshrc ~/.zshrc
 ln -s ~/Documents/script/custom ~/.oh-my-zsh/custom
 fi
 
@@ -56,8 +57,13 @@ git clone --depth=1 https://github.com/junegunn/fzf.git ~/.fzf
 fi
 
 ### xfce
-# mkdir -p ~/.config/xfce4/terminal/colorschemes
-# cp ~/Documents/script/fedora/xfce/tomorrow.theme ~/.config/xfce4/terminal/colorschemes
+if [[ ! -d ~/.config/xfce4/terminal/colorschemes ]]; then
+mkdir -p ~/.config/xfce4/terminal/colorschemes
+cp ~/Documents/script/centos8/kevin/.config/xfce4/terminal/colorschemes/tomorrow.theme ~/.config/xfce4/terminal/colorschemes
+cp ~/Documents/script/centos8/kevin/.config/xfce4/terminal/terminalrc ~/.config/xfce4/terminal
+mkdir -p ~/.config/xfce4/xfconf/xfce-perchannel-xml
+cp ~/Documents/script/centos8/kevin/.config/xfce4/xfconf/xfce-perchannel-xml/* ~/.config/xfce4/xfconf/xfce-perchannel-xml
+fi
 
 #chsh -s /bin/zsh
 # google-chrome --proxy-server=socks5://127.0.0.1:1080
@@ -65,7 +71,8 @@ fi
 ### perlbrew
 if [[ ! -d ~/perl5 ]]; then
 echo setup perlbrew
-curl -L https://install.perlbrew.pl | bash
+curl -L https://raw.githubusercontent.com/gugod/App-perlbrew/master/perlbrew-install | bash
+~/perl5/perlbrew/bin/perlbrew install-cpanm
 fi
 
 ### pyenv
@@ -77,5 +84,4 @@ fi
 # dnf install make gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel
 # env PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install xxx
 
-#chsh -s /bin/zsh
-# google-chrome --proxy-server=socks5://127.0.0.1:1080
+
