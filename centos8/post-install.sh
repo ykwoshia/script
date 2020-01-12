@@ -1,3 +1,4 @@
+# echo https://ykwoshia:passwd@github.com > ~/.git-credentials
 mkdir -p ~/Documents
 if [[ ! -d ~/Documents/myvim ]]; then
 echo clone myvim
