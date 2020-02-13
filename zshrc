@@ -4,6 +4,7 @@ export PATH=$HOME/.pyenv/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+export LD_LIBRARY_PATH=$HOME/local/lib
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -76,8 +77,8 @@ chpwd() {
 
 # User configuration
 #source $HOME/perl5/perlbrew/etc/bashrc
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -105,10 +106,10 @@ eval "$(pyenv virtualenv-init -)"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cl="clear"
-# alias vi="vimx"
-alias vi="nvim"
+alias vi="vim"
+#alias vi="nvim"
 alias def="sdcv"
-# alias grep="grep -P --colors=auto"
+alias ge="grep -P -i -I -n --exclude-dir=.git --exclude=tags --colors=auto"
 alias pie="perl -pi -e"
 # alias python="python3"
 
