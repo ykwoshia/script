@@ -1,0 +1,52 @@
+[boot]
+# use http
+inst.ks=http://192.168.199.133/linux/centos8/ks.cfg
+# use hard drive or usb drive
+inst.ks=hd:566B-9C3E:ks.cfg
+
+[files]
+/etc/sysconfig/network-scripts/ifcfg-enp0s3
+/etc/yum.repos.d/
+
+
+[packages]
+bash-completion
+vim
+tmux
+rsync
+zsh
+
+[zsh]
+change /etc/passwd user shell from /bin/bash to /bin/zsh
+
+[xfce]
+
+### below is from sauronlenoir
+epel-release
+# use epel-release's xfce if it's ready or use below
+#dnf config-manager --set-enabled PowerTools
+#rpm -ivh https://sauronlenoir.be/repo/rpm/sauronlenoir-release-1-0.el8.noarch.rpm
+dnf install xorg-x11-server-Xorg
+dnf install xorg-x11-xinit
+dnf group install Xfce
+
+### below is from epel, maybe someday there will be group install Xfce
+xorg-x11-server-Xorg
+xorg-x11-xinit
+xfce4-*
+xfwm4
+xfconf
+xfdashboard
+xfdesktop
+
+
+[virtualbox]
+elfutils-libelf-devel
+dkms
+
+[boost]
+dnf install boost-devel
+[commands]
+# show ip address of this machine
+ip a show
+
