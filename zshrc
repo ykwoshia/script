@@ -77,6 +77,7 @@ chpwd() {
 
 # User configuration
 source $HOME/perl5/perlbrew/etc/bashrc
+export PERL_CPANM_OPT="--from http://192.168.199.133/CPAN"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 # export MANPATH="/usr/local/man:$MANPATH"
