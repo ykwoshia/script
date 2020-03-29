@@ -76,9 +76,9 @@ chpwd() {
 }
 
 # User configuration
-#source $HOME/perl5/perlbrew/etc/bashrc
-# eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
+source $HOME/perl5/perlbrew/etc/bashrc
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -108,7 +108,7 @@ chpwd() {
 alias cl="clear"
 alias vi="vim"
 #alias vi="nvim"
-alias def="sdcv"
+# alias def="sdcv"
 alias ge="grep -P -i -I -n --exclude-dir=.git --exclude=tags --colors=auto"
 alias pie="perl -pi -e"
 # alias python="python3"
