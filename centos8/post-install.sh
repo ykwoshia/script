@@ -92,11 +92,13 @@ fi
 
 ### xfce
 if [[ ! -d ~/.config/xfce4/terminal/colorschemes ]]; then
-mkdir -p ~/.config/xfce4/terminal/colorschemes
-cp ~/Documents/script/centos8/kevin/.config/xfce4/terminal/colorschemes/tomorrow.theme ~/.config/xfce4/terminal/colorschemes
-cp ~/Documents/script/centos8/kevin/.config/xfce4/terminal/terminalrc ~/.config/xfce4/terminal
-mkdir -p ~/.config/xfce4/xfconf/xfce-perchannel-xml
-cp ~/Documents/script/centos8/kevin/.config/xfce4/xfconf/xfce-perchannel-xml/* ~/.config/xfce4/xfconf/xfce-perchannel-xml
+    mkdir -p ~/.config/xfce4/terminal/colorschemes
+    cp ~/Documents/script/centos8/kevin/.config/xfce4/terminal/colorschemes/tomorrow.theme ~/.config/xfce4/terminal/colorschemes
+    cp ~/Documents/script/centos8/kevin/.config/xfce4/terminal/terminalrc ~/.config/xfce4/terminal
+    mkdir -p ~/.config/xfce4/xfconf/xfce-perchannel-xml
+    cp ~/Documents/script/centos8/kevin/.config/xfce4/xfconf/xfce-perchannel-xml/* ~/.config/xfce4/xfconf/xfce-perchannel-xml
+    mkdir -p ~/.config/autostart
+    cp ~/Documents/script/centos8/kevin/.config/autostart/* ~/.config/autostart
 fi
 
 #chsh -s /bin/zsh
