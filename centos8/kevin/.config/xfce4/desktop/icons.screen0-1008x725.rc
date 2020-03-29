@@ -1,0 +1,19 @@
+[xfdesktop-version-4.10.3+-rcfile_format]
+4.10.3+=true
+
+[Filesystem root]
+row=0
+col=0
+
+[758b67c5-2436-4d4b-850d-c8a386a15b5b]
+row=1
+col=0
+
+[/]
+row=2
+col=0
+
+[/home/kevin]
+row=3
+col=0
+
