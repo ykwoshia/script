@@ -26,8 +26,12 @@ fi
 if [[ ! -d ~/.vim ]]; then
     echo setup myvim
     ln -s ~/Documents/myvim/vimrc ~/.vimrc
-    mkdir -p ~/.vim/colors
-    cp ~/Documents/myvim/Tomorrow-Night-Eighties.vim ~/.vim/colors
+    if [[ -f ~/vim.tar.gz ]]; then
+        tar -zxf vim.tar.gz
+    else
+        mkdir -p ~/.vim/colors
+        cp ~/Documents/myvim/Tomorrow-Night-Eighties.vim ~/.vim/colors
+    fi
 
     ### tmux
     ln -s ~/Documents/myvim/tmuxconf ~/.tmux.conf
@@ -74,12 +78,16 @@ fi
 ### fzf
 if [[ ! -d ~/.fzf ]]; then
     echo setup fzf
-    if [[ -z "$GIT_REMOTE" ]]; then
-        git clone --depth=1 https://github.com/junegunn/fzf.git ~/.fzf
+    if [[ -f ~/fzf.tar.gz ]]; then
+        tar -xzf fzf.tar.gz
     else
-        git clone ${GIT_REMOTE}/fzf.git ~/.fzf
+        if [[ -z "$GIT_REMOTE" ]]; then
+            git clone --depth=1 https://github.com/junegunn/fzf.git ~/.fzf
+        else
+            git clone ${GIT_REMOTE}/fzf.git ~/.fzf
+        fi
+        ~/.fzf/install
     fi
-# ~/.fzf/install
 fi
 
 ### xfce
@@ -95,17 +103,24 @@ fi
 # google-chrome --proxy-server=socks5://127.0.0.1:1080
 #https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
 ### perlbrew
-# if [[ ! -d ~/perl5 ]]; then
-# echo setup perlbrew
-# curl -L https://raw.githubusercontent.com/gugod/App-perlbrew/master/perlbrew-install | bash
-# ~/perl5/perlbrew/bin/perlbrew install-cpanm
-# fi
+if [[ ! -d ~/perl5 ]]; then
+    echo setup perlbrew
+    if [[ -f ~/perl5.tar.gz ]]; then
+        tar -zxf perl5.tar.gz
+    else
+        curl -L https://raw.githubusercontent.com/gugod/App-perlbrew/master/perlbrew-install | bash
+        ~/perl5/perlbrew/bin/perlbrew install-cpanm
+    fi
+fi
 
 ### pyenv
-# if [[ ! -d ~/.pyenv ]]; then
-# echo setup pyenv
-# curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
-# fi
+if [[ ! -d ~/.pyenv ]]; then
+    echo setup pyenv
+    if [[ -f ~/pyenv.tar.gz ]]; then
+        tar -zxf pyenv.tar.gz
+    else
+        curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+fi
 ## pyinstaller require CPython build with --enable-shared
 # dnf install make gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel
 # env PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install xxx
