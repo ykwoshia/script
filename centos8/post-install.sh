@@ -56,6 +56,9 @@ if [[ ! -d ~/.oh-my-zsh ]]; then
     rm -rf ~/.zshrc
     ln -s ~/Documents/script/zshrc ~/.zshrc
     ln -s ~/Documents/script/custom ~/.oh-my-zsh/custom
+    if [[ ! -f ~/.z ]]; then
+        touch ~/.z
+    fi
 fi
 
 ### powerline fonts
