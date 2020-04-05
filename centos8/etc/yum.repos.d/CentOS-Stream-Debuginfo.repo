@@ -12,9 +12,9 @@
 # Note: packages in the debuginfo repo are currently not signed
 #
 
-[base-debuginfo]
-name=CentOS-$releasever - Debuginfo
-baseurl=http://debuginfo.centos.org/$releasever/$basearch/
+[Stream-base-debuginfo]
+name=CentOS-Stream - Debuginfo
+baseurl=http://debuginfo.centos.org/$stream/$basearch/
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial

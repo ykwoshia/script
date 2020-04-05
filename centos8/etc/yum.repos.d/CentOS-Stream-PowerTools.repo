@@ -10,11 +10,10 @@
 #
 #
 
-[PowerTools]
-name=CentOS-$releasever - PowerTools
-#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=PowerTools&infra=$infra
-#baseurl=http://mirror.centos.org/$contentdir/$releasever/PowerTools/$basearch/os/
-baseurl=http://192.168.199.133/centos/8-stream/PowerTools/$basearch/os/
+[Stream-PowerTools]
+name=CentOS-Stream - PowerTools
+#mirrorlist=http://mirrorlist.centos.org/?release=$stream&arch=$basearch&repo=PowerTools&infra=$infra
+baseurl=http://192.168.199.133/centos/$stream/PowerTools/$basearch/os/
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial

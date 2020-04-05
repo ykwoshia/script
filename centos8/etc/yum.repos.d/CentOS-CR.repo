@@ -13,16 +13,11 @@
 # The CR repo is shipped in a disabled state by default; its important that users
 # understand the implications of turning this on.
 #
-# NOTE: We do not use a mirrorlist for the CR repos, to ensure content is available
-#       to everyone as soon as possible, and not need to wait for the external
-#       mirror network to seed first. However, many local mirrors will carry CR repos
-#       and if desired you can use one of these local mirrors by editing the baseurl
-#       line in the repo config below.
-#
 
 [cr]
 name=CentOS-$releasever - cr
-baseurl=http://mirror.centos.org/$contentdir/$releasever/cr/$basearch/os/
+#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=cr&infra=$infra
+baseurl=http://192.168.199.133/centos/$releasever/cr/$basearch/os/
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial

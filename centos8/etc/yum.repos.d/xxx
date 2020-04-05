@@ -1,0 +1,380 @@
+diff --git a/CentOS-AppStream.repo b/CentOS-AppStream.repo
+index e6a7e0c..23ff5e8 100644
+--- a/CentOS-AppStream.repo
++++ b/CentOS-AppStream.repo
+@@ -12,8 +12,8 @@
+ 
+ [AppStream]
+ name=CentOS-$releasever - AppStream
+-mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=AppStream&infra=$infra
+-#baseurl=http://mirror.centos.org/$contentdir/$releasever/AppStream/$basearch/os/
++#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=AppStream&infra=$infra
++baseurl=http://192.168.199.133/centos/$releasever/AppStream/$basearch/os/
+ gpgcheck=1
+ enabled=1
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+diff --git a/CentOS-Base.repo b/CentOS-Base.repo
+index 0f8576d..a393ee2 100644
+--- a/CentOS-Base.repo
++++ b/CentOS-Base.repo
+@@ -12,8 +12,8 @@
+ 
+ [BaseOS]
+ name=CentOS-$releasever - Base
+-mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=BaseOS&infra=$infra
+-#baseurl=http://mirror.centos.org/$contentdir/$releasever/BaseOS/$basearch/os/
++#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=BaseOS&infra=$infra
++baseurl=http://192.168.199.133/centos/$releasever/BaseOS/$basearch/os/
+ gpgcheck=1
+ enabled=1
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+diff --git a/CentOS-CR.repo b/CentOS-CR.repo
+index 70b579b..7396e10 100644
+--- a/CentOS-CR.repo
++++ b/CentOS-CR.repo
+@@ -16,8 +16,8 @@
+ 
+ [cr]
+ name=CentOS-$releasever - cr
+-mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=cr&infra=$infra
+-#baseurl=http://mirror.centos.org/$contentdir/$releasever/cr/$basearch/os/
++#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=cr&infra=$infra
++baseurl=http://192.168.199.133/centos/$releasever/cr/$basearch/os/
+ gpgcheck=1
+ enabled=0
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+diff --git a/CentOS-Devel.repo b/CentOS-Devel.repo
+index 404fbd7..5e41001 100644
+--- a/CentOS-Devel.repo
++++ b/CentOS-Devel.repo
+@@ -12,8 +12,8 @@
+ 
+ [Devel]
+ name=CentOS-$releasever - Devel WARNING! FOR BUILDROOT USE ONLY!
+-mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=Devel&infra=$infra
+-#baseurl=http://mirror.centos.org/$contentdir/$releasever/Devel/$basearch/os/
++#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=Devel&infra=$infra
++baseurl=http://192.168.199.133/centos/$releasever/Devel/$basearch/os/
+ gpgcheck=1
+ enabled=0
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+diff --git a/CentOS-Extras.repo b/CentOS-Extras.repo
+index ab968d6..21b480d 100644
+--- a/CentOS-Extras.repo
++++ b/CentOS-Extras.repo
+@@ -13,8 +13,8 @@
+ #additional packages that may be useful
+ [extras]
+ name=CentOS-$releasever - Extras
+-mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=extras&infra=$infra
+-#baseurl=http://mirror.centos.org/$contentdir/$releasever/extras/$basearch/os/
++#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=extras&infra=$infra
++baseurl=http://192.168.199.133/centos/$releasever/extras/$basearch/os/
+ gpgcheck=1
+ enabled=1
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+diff --git a/CentOS-HA.repo b/CentOS-HA.repo
+index f533fe3..34d3c3d 100644
+--- a/CentOS-HA.repo
++++ b/CentOS-HA.repo
+@@ -12,8 +12,8 @@
+ 
+ [HighAvailability]
+ name=CentOS-$releasever - HA
+-mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=HighAvailability&infra=$infra
+-#baseurl=http://mirror.centos.org/$contentdir/$releasever/HighAvailability/$basearch/os/
++#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=HighAvailability&infra=$infra
++baseurl=http://192.168.199.133/centos/$releasever/HighAvailability/$basearch/os/
+ gpgcheck=1
+ enabled=0
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+diff --git a/CentOS-PowerTools.repo b/CentOS-PowerTools.repo
+index ed34fa0..bf7753f 100644
+--- a/CentOS-PowerTools.repo
++++ b/CentOS-PowerTools.repo
+@@ -12,8 +12,8 @@
+ 
+ [PowerTools]
+ name=CentOS-$releasever - PowerTools
+-mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=PowerTools&infra=$infra
+-#baseurl=http://mirror.centos.org/$contentdir/$releasever/PowerTools/$basearch/os/
++#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=PowerTools&infra=$infra
++baseurl=http://192.168.199.133/centos/$releasever/PowerTools/$basearch/os/
+ gpgcheck=1
+ enabled=0
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+diff --git a/CentOS-Stream-AppStream.repo b/CentOS-Stream-AppStream.repo
+index 95e84e3..dbc4e69 100644
+--- a/CentOS-Stream-AppStream.repo
++++ b/CentOS-Stream-AppStream.repo
+@@ -12,8 +12,8 @@
+ 
+ [Stream-AppStream]
+ name=CentOS-Stream - AppStream
+-mirrorlist=http://mirrorlist.centos.org/?release=$stream&arch=$basearch&repo=AppStream&infra=$infra
+-#baseurl=http://mirror.centos.org/$contentdir/$stream/AppStream/$basearch/os/
++#mirrorlist=http://mirrorlist.centos.org/?release=$stream&arch=$basearch&repo=AppStream&infra=$infra
++baseurl=http://192.168.199.133/centos/$stream/AppStream/$basearch/os/
+ gpgcheck=1
+ enabled=1
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+diff --git a/CentOS-Stream-Base.repo b/CentOS-Stream-Base.repo
+index 3e3903b..8347ae6 100644
+--- a/CentOS-Stream-Base.repo
++++ b/CentOS-Stream-Base.repo
+@@ -12,8 +12,8 @@
+ 
+ [Stream-BaseOS]
+ name=CentOS-Stream - Base
+-mirrorlist=http://mirrorlist.centos.org/?release=$stream&arch=$basearch&repo=BaseOS&infra=$infra
+-#baseurl=http://mirror.centos.org/$contentdir/$stream/BaseOS/$basearch/os/
++#mirrorlist=http://mirrorlist.centos.org/?release=$stream&arch=$basearch&repo=BaseOS&infra=$infra
++baseurl=http://192.168.199.133/centos/$stream/BaseOS/$basearch/os/
+ gpgcheck=1
+ enabled=1
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+diff --git a/CentOS-Stream-Devel.repo b/CentOS-Stream-Devel.repo
+index 621ad28..989abe4 100644
+--- a/CentOS-Stream-Devel.repo
++++ b/CentOS-Stream-Devel.repo
+@@ -12,8 +12,8 @@
+ 
+ [Stream-Devel]
+ name=CentOS-Stream - Devel WARNING! FOR BUILDROOT USE ONLY!
+-mirrorlist=http://mirrorlist.centos.org/?release=$stream&arch=$basearch&repo=Devel&infra=$infra
+-#baseurl=http://mirror.centos.org/$contentdir/$stream/Devel/$basearch/os/
++#mirrorlist=http://mirrorlist.centos.org/?release=$stream&arch=$basearch&repo=Devel&infra=$infra
++baseurl=http://192.168.199.133/centos/$stream/Devel/$basearch/os/
+ gpgcheck=1
+ enabled=0
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+diff --git a/CentOS-Stream-Extras.repo b/CentOS-Stream-Extras.repo
+index 445c9f5..2d75b30 100644
+--- a/CentOS-Stream-Extras.repo
++++ b/CentOS-Stream-Extras.repo
+@@ -13,8 +13,8 @@
+ #additional packages that may be useful
+ [Stream-extras]
+ name=CentOS-Stream - Extras
+-mirrorlist=http://mirrorlist.centos.org/?release=$stream&arch=$basearch&repo=extras&infra=$infra
+-#baseurl=http://mirror.centos.org/$contentdir/$stream/extras/$basearch/os/
++#mirrorlist=http://mirrorlist.centos.org/?release=$stream&arch=$basearch&repo=extras&infra=$infra
++baseurl=http://192.168.199.133/centos/$stream/extras/$basearch/os/
+ gpgcheck=1
+ enabled=1
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+diff --git a/CentOS-Stream-PowerTools.repo b/CentOS-Stream-PowerTools.repo
+index 7591820..8cfc9ef 100644
+--- a/CentOS-Stream-PowerTools.repo
++++ b/CentOS-Stream-PowerTools.repo
+@@ -12,8 +12,8 @@
+ 
+ [Stream-PowerTools]
+ name=CentOS-Stream - PowerTools
+-mirrorlist=http://mirrorlist.centos.org/?release=$stream&arch=$basearch&repo=PowerTools&infra=$infra
+-#baseurl=http://mirror.centos.org/$contentdir/$stream/PowerTools/$basearch/os/
++#mirrorlist=http://mirrorlist.centos.org/?release=$stream&arch=$basearch&repo=PowerTools&infra=$infra
++baseurl=http://192.168.199.133/centos/$stream/PowerTools/$basearch/os/
+ gpgcheck=1
+ enabled=0
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+diff --git a/CentOS-centosplus.repo b/CentOS-centosplus.repo
+index c035a41..e403bc3 100644
+--- a/CentOS-centosplus.repo
++++ b/CentOS-centosplus.repo
+@@ -13,8 +13,8 @@
+ #additional packages that extend functionality of existing packages
+ [centosplus]
+ name=CentOS-$releasever - Plus
+-mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=centosplus&infra=$infra
+-#baseurl=http://mirror.centos.org/$contentdir/$releasever/centosplus/$basearch/os/
++#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=centosplus&infra=$infra
++baseurl=http://192.168.199.133/centos/$releasever/centosplus/$basearch/os/
+ gpgcheck=1
+ enabled=0
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+diff --git a/CentOS-fasttrack.repo b/CentOS-fasttrack.repo
+index 9aba30e..cf167f1 100644
+--- a/CentOS-fasttrack.repo
++++ b/CentOS-fasttrack.repo
+@@ -2,8 +2,8 @@
+ 
+ [fasttrack]
+ name=CentOS-$releasever - fasttrack
+-mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=fasttrack&infra=$infra
+-#baseurl=http://mirror.centos.org/$contentdir/$releasever/fasttrack/$basearch/os/
++#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=fasttrack&infra=$infra
++baseurl=http://192.168.199.133/centos/$releasever/fasttrack/$basearch/os/
+ gpgcheck=1
+ enabled=0
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+diff --git a/epel-modular.repo b/epel-modular.repo
+index 5d4f968..f6f68ff 100644
+--- a/epel-modular.repo
++++ b/epel-modular.repo
+@@ -1,23 +1,23 @@
+ [epel-modular]
+ name=Extra Packages for Enterprise Linux Modular $releasever - $basearch
+-#baseurl=https://download.fedoraproject.org/pub/epel/$releasever/Modular/$basearch
+-metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-modular-$releasever&arch=$basearch&infra=$infra&content=$contentdir
++baseurl=http://192.168.199.133/epel/$releasever/Modular/$basearch
++#metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-modular-$releasever&arch=$basearch&infra=$infra&content=$contentdir
+ enabled=1
+ gpgcheck=1
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8
+ 
+ [epel-modular-debuginfo]
+ name=Extra Packages for Enterprise Linux Modular $releasever - $basearch - Debug
+-#baseurl=https://download.fedoraproject.org/pub/epel/$releasever/Modular/$basearch/debug
+-metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-modular-debug-$releasever&arch=$basearch&infra=$infra&content=$contentdir
++baseurl=http://192.168.199.133/epel/$releasever/Modular/$basearch/debug
++#metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-modular-debug-$releasever&arch=$basearch&infra=$infra&content=$contentdir
+ enabled=0
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8
+ gpgcheck=1
+ 
+ [epel-modular-source]
+ name=Extra Packages for Enterprise Linux Modular $releasever - $basearch - Source
+-#baseurl=https://download.fedoraproject.org/pub/epel/$releasever/Modular/SRPMS
+-metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-modular-source-$releasever&arch=$basearch&infra=$infra&content=$contentdir
++baseurl=http://192.168.199.133/epel/$releasever/Modular/SRPMS
++#metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-modular-source-$releasever&arch=$basearch&infra=$infra&content=$contentdir
+ enabled=0
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8
+ gpgcheck=1
+diff --git a/epel-playground.repo b/epel-playground.repo
+index e1ee10b..0024df4 100644
+--- a/epel-playground.repo
++++ b/epel-playground.repo
+@@ -1,23 +1,23 @@
+ [epel-playground]
+ name=Extra Packages for Enterprise Linux $releasever - Playground - $basearch
+-#baseurl=https://download.fedoraproject.org/pub/epel/playground/$releasever/Everything/$basearch/os
+-metalink=https://mirrors.fedoraproject.org/metalink?repo=playground-epel$releasever&arch=$basearch&infra=$infra&content=$contentdir
++baseurl=http://192.168.199.133/epel/playground/$releasever/Everything/$basearch/os
++#metalink=https://mirrors.fedoraproject.org/metalink?repo=playground-epel$releasever&arch=$basearch&infra=$infra&content=$contentdir
+ enabled=0
+ gpgcheck=1
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8
+ 
+ [epel-playground-debuginfo]
+ name=Extra Packages for Enterprise Linux $releasever - Playground - $basearch - Debug
+-#baseurl=https://download.fedoraproject.org/pub/epel/playground/$releasever/Everything/$basearch/debug
+-metalink=https://mirrors.fedoraproject.org/metalink?repo=playground-debug-epel$releasever&arch=$basearch&infra=$infra&content=$contentdir
++baseurl=http://192.168.199.133/epel/playground/$releasever/Everything/$basearch/debug
++#metalink=https://mirrors.fedoraproject.org/metalink?repo=playground-debug-epel$releasever&arch=$basearch&infra=$infra&content=$contentdir
+ enabled=0
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8
+ gpgcheck=1
+ 
+ [epel-playground-source]
+ name=Extra Packages for Enterprise Linux $releasever - Playground - $basearch - Source
+-#baseurl=https://download.fedoraproject.org/pub/epel/playground/$releasever/Everything/source/tree/
+-metalink=https://mirrors.fedoraproject.org/metalink?repo=playground-source-epel$releasever&arch=$basearch&infra=$infra&content=$contentdir
++baseurl=http://192.168.199.133/epel/playground/$releasever/Everything/source/tree/
++#metalink=https://mirrors.fedoraproject.org/metalink?repo=playground-source-epel$releasever&arch=$basearch&infra=$infra&content=$contentdir
+ enabled=0
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8
+ gpgcheck=1
+diff --git a/epel-testing-modular.repo b/epel-testing-modular.repo
+index 03fb6ba..eeeb7d3 100644
+--- a/epel-testing-modular.repo
++++ b/epel-testing-modular.repo
+@@ -1,23 +1,23 @@
+ [epel-testing-modular]
+ name=Extra Packages for Enterprise Linux Modular $releasever - Testing - $basearch
+-#baseurl=https://download.fedoraproject.org/pub/epel/testing/$releasever/Modular/$basearch
+-metalink=https://mirrors.fedoraproject.org/metalink?repo=testing-modular-epel$releasever&arch=$basearch&infra=$infra&content=$contentdir
++baseurl=http://192.168.199.133/epel/testing/$releasever/Modular/$basearch
++#metalink=https://mirrors.fedoraproject.org/metalink?repo=testing-modular-epel$releasever&arch=$basearch&infra=$infra&content=$contentdir
+ enabled=0
+ gpgcheck=1
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8
+ 
+ [epel-testing-modular-debuginfo]
+ name=Extra Packages for Enterprise Linux Modular $releasever - Testing - $basearch - Debug
+-#baseurl=https://download.fedoraproject.org/pub/epel/testing/$releasever/Modular/$basearch/debug
+-metalink=https://mirrors.fedoraproject.org/metalink?repo=testing-modular-debug-epel$releasever&arch=$basearch&infra=$infra&content=$contentdir
++baseurl=http://192.168.199.133/epel/testing/$releasever/Modular/$basearch/debug
++#metalink=https://mirrors.fedoraproject.org/metalink?repo=testing-modular-debug-epel$releasever&arch=$basearch&infra=$infra&content=$contentdir
+ enabled=0
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8
+ gpgcheck=1
+ 
+ [epel-testing-modular-source]
+ name=Extra Packages for Enterprise Linux Modular $releasever - Testing - $basearch - Source
+-#baseurl=https://download.fedoraproject.org/pub/epel/testing/$releasever/Modular/SRPMS
+-metalink=https://mirrors.fedoraproject.org/metalink?repo=testing-modular-source-epel$releasever&arch=$basearch&infra=$infra&content=$contentdir
++baseurl=http://192.168.199.133/epel/testing/$releasever/Modular/SRPMS
++#metalink=https://mirrors.fedoraproject.org/metalink?repo=testing-modular-source-epel$releasever&arch=$basearch&infra=$infra&content=$contentdir
+ enabled=0
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8
+ gpgcheck=1
+diff --git a/epel-testing.repo b/epel-testing.repo
+index 08050b3..abd3f6e 100644
+--- a/epel-testing.repo
++++ b/epel-testing.repo
+@@ -1,23 +1,23 @@
+ [epel-testing]
+ name=Extra Packages for Enterprise Linux $releasever - Testing - $basearch
+-#baseurl=https://download.fedoraproject.org/pub/epel/testing/$releasever/Everything/$basearch
+-metalink=https://mirrors.fedoraproject.org/metalink?repo=testing-epel$releasever&arch=$basearch&infra=$infra&content=$contentdir
++baseurl=http://192.168.199.133/epel/testing/$releasever/Everything/$basearch
++#metalink=https://mirrors.fedoraproject.org/metalink?repo=testing-epel$releasever&arch=$basearch&infra=$infra&content=$contentdir
+ enabled=0
+ gpgcheck=1
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8
+ 
+ [epel-testing-debuginfo]
+ name=Extra Packages for Enterprise Linux $releasever - Testing - $basearch - Debug
+-#baseurl=https://download.fedoraproject.org/pub/epel/testing/$releasever/Everything/$basearch/debug
+-metalink=https://mirrors.fedoraproject.org/metalink?repo=testing-debug-epel$releasever&arch=$basearch&infra=$infra&content=$contentdir
++baseurl=http://192.168.199.133/epel/testing/$releasever/Everything/$basearch/debug
++#metalink=https://mirrors.fedoraproject.org/metalink?repo=testing-debug-epel$releasever&arch=$basearch&infra=$infra&content=$contentdir
+ enabled=0
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8
+ gpgcheck=1
+ 
+ [epel-testing-source]
+ name=Extra Packages for Enterprise Linux $releasever - Testing - $basearch - Source
+-#baseurl=https://download.fedoraproject.org/pub/epel/testing/$releasever/Everything/SRPMS
+-metalink=https://mirrors.fedoraproject.org/metalink?repo=testing-source-epel$releasever&arch=$basearch&infra=$infra&content=$contentdir
++baseurl=http://192.168.199.133/epel/testing/$releasever/Everything/SRPMS
++#metalink=https://mirrors.fedoraproject.org/metalink?repo=testing-source-epel$releasever&arch=$basearch&infra=$infra&content=$contentdir
+ enabled=0
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8
+ gpgcheck=1
+diff --git a/epel.repo b/epel.repo
+index 5ab3021..3d6739f 100644
+--- a/epel.repo
++++ b/epel.repo
+@@ -1,23 +1,23 @@
+ [epel]
+ name=Extra Packages for Enterprise Linux $releasever - $basearch
+-#baseurl=https://download.fedoraproject.org/pub/epel/$releasever/Everything/$basearch
+-metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-$releasever&arch=$basearch&infra=$infra&content=$contentdir
++baseurl=http://192.168.199.133/epel/$releasever/Everything/$basearch
++#metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-$releasever&arch=$basearch&infra=$infra&content=$contentdir
+ enabled=1
+ gpgcheck=1
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8
+ 
+ [epel-debuginfo]
+ name=Extra Packages for Enterprise Linux $releasever - $basearch - Debug
+-#baseurl=https://download.fedoraproject.org/pub/epel/$releasever/Everything/$basearch/debug
+-metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-debug-$releasever&arch=$basearch&infra=$infra&content=$contentdir
++baseurl=http://192.168.199.133/epel/$releasever/Everything/$basearch/debug
++#metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-debug-$releasever&arch=$basearch&infra=$infra&content=$contentdir
+ enabled=0
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8
+ gpgcheck=1
+ 
+ [epel-source]
+ name=Extra Packages for Enterprise Linux $releasever - $basearch - Source
+-#baseurl=https://download.fedoraproject.org/pub/epel/$releasever/Everything/SRPMS
+-metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-source-$releasever&arch=$basearch&infra=$infra&content=$contentdir
++baseurl=http://192.168.199.133/epel/$releasever/Everything/SRPMS
++#metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-source-$releasever&arch=$basearch&infra=$infra&content=$contentdir
+ enabled=0
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8
+ gpgcheck=1

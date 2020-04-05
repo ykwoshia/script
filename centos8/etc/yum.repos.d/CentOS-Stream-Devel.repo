@@ -1,4 +1,4 @@
-# CentOS-Extras.repo
+# CentOS-Stream-Devel.repo
 #
 # The mirror system uses the connecting IP address of the client and the
 # update status of each mirror to pick mirrors that are updated to and
@@ -10,12 +10,10 @@
 #
 #
 
-#additional packages that may be useful
-[extras]
-name=CentOS-$releasever - Extras
-#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=extras&infra=$infra
-baseurl=http://192.168.199.133/centos/$releasever/extras/$basearch/os/
+[Stream-Devel]
+name=CentOS-Stream - Devel WARNING! FOR BUILDROOT USE ONLY!
+#mirrorlist=http://mirrorlist.centos.org/?release=$stream&arch=$basearch&repo=Devel&infra=$infra
+baseurl=http://192.168.199.133/centos/$stream/Devel/$basearch/os/
 gpgcheck=1
-enabled=1
+enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
-

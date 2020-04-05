@@ -10,33 +10,33 @@
 #
 #
 
-[BaseOS-source]
-name=CentOS-$releasever - BaseOS Sources
-baseurl=http://vault.centos.org/$contentdir/$releasever/BaseOS/Source/
+[Stream-BaseOS-source]
+name=CentOS-Stream - BaseOS Sources
+baseurl=http://vault.centos.org/$contentdir/$stream/BaseOS/Source/
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
 
 #AppStream
-[AppStream-source]
-name=CentOS-$releasever - AppStream Sources
-baseurl=http://vault.centos.org/$contentdir/$releasever/AppStream/Source/
+[Stream-AppStream-source]
+name=CentOS-Stream - AppStream Sources
+baseurl=http://vault.centos.org/$contentdir/$stream/AppStream/Source/
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
 
 #additional packages that may be useful
-[extras-source]
-name=CentOS-$releasever - Extras Sources
-baseurl=http://vault.centos.org/$contentdir/$releasever/extras/Source/
+[Stream-extras-source]
+name=CentOS-Stream - Extras Sources
+baseurl=http://vault.centos.org/$contentdir/$stream/extras/Source/
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
 
 #additional packages that extend functionality of existing packages
-[centosplus-source]
-name=CentOS-$releasever - Plus Sources
-baseurl=http://vault.centos.org/$contentdir/$releasever/centosplus/Source/
+[Stream-centosplus-source]
+name=CentOS-Stream - Plus Sources
+baseurl=http://vault.centos.org/$contentdir/$stream/centosplus/Source/
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial

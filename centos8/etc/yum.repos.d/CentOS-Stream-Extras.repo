@@ -11,12 +11,11 @@
 #
 
 #additional packages that may be useful
-[extras]
-name=CentOS-$releasever - Extras
-#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=extras&infra=$infra
-#baseurl=http://mirror.centos.org/$contentdir/$releasever/extras/$basearch/os/
+[Stream-extras]
+name=CentOS-Stream - Extras
+#mirrorlist=http://mirrorlist.centos.org/?release=$stream&arch=$basearch&repo=extras&infra=$infra
+baseurl=http://192.168.199.133/centos/$stream/extras/$basearch/os/
 gpgcheck=1
-baseurl=http://192.168.199.133/centos/8-stream/extras/$basearch/os/
 enabled=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
 
