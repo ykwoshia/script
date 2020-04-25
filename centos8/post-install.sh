@@ -30,7 +30,9 @@ if [[ ! -d ~/.vim ]]; then
         tar -zxf vim.tar.gz
     else
         mkdir -p ~/.vim/colors
+        mkdir -p ~/.vim/autoload
         cp ~/Documents/myvim/Tomorrow-Night-Eighties.vim ~/.vim/colors
+        cp ~/Documents/myvim/plug.vim ~/.vim/autoload
     fi
 
     ### tmux
