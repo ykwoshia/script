@@ -61,7 +61,7 @@ if [[ ! -d ~/.oh-my-zsh ]]; then
     rm -rf ~/.oh-my-zsh/custom
     rm -rf ~/.zshrc
     ln -s ~/Documents/script/zshrc ~/.zshrc
-    ln -s ~/Documents/script/custom ~/.oh-my-zsh/custom
+    ln -s ~/Documents/script/oh-my-zh/custom ~/.oh-my-zsh/custom
     if [[ ! -f ~/.z ]]; then
         touch ~/.z
     fi
