@@ -110,7 +110,7 @@ alias cl="clear"
 alias vi="vimx"
 #alias vi="nvim"
 # alias def="sdcv"
-alias ge="grep -P -i -I -n --exclude-dir=.git --exclude=tags --colors=auto"
+# alias ge="grep -P -i -I -n --exclude-dir=.git --exclude=tags --color=auto"
 alias pie="perl -pi -e"
 # alias python="python3"
 
